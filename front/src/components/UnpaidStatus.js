@@ -39,7 +39,7 @@ export default function UnpaidStatus() {
 
     return (
         <div className="card">
-            <h3>전체 미납 현황</h3>
+            
             <p><strong>기준 날짜:</strong> {reportDate}</p>
             <p><strong>미납 인원 수:</strong> {unpaidCount} 명</p>
             <p><strong>총 미납 금액:</strong> {totalUnpaid.toLocaleString()} 원</p>

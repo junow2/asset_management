@@ -14,7 +14,7 @@ export default function Payments() {
     const [payments, setPayments] = useState([]);
     const [employees, setEmployees] = useState([]);
     const [selectedEmployee, setSelectedEmployee] = useState(null);
-
+    
     // Search for employees by name
     const handleSearch = async () => {
         if (!searchName.trim()) {

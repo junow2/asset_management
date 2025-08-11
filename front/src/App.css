@@ -1,38 +1,206 @@
-.App {
+/* --- Light Mode (Default) --- */
+
+/* Overall Layout */
+.main-container {
+  padding: 30px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Page and Section Titles */
+.page-title, .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 30px 0;
+  color: #34495e;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Card Styles */
+.card, .form-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  margin-bottom: 20px;
+}
+.employee-table td button + button {
+  margin-left: 8px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Styles */
+.employee-table, .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.employee-table th, .employee-table td,
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.employee-table th, .table th {
+  background-color: #f1f3f5;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.employee-table tr:nth-child(even),
+.table tr:nth-child(even) {
+  background-color: #fafafa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --- Navbar Styles --- */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #2c3e50;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle-button {
+  background: none;
+  border: 1px solid #bdc3c7;
+  color: #34495e;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  margin-left: 20px;
+}
+
+.theme-toggle-button:hover {
+  background-color: #f1f3f5;
+}
+
+
+/* --- Dark Mode Styles --- */
+
+/* Apply dark theme when the parent has the 'dark' class */
+.dark .main-container {
+  background-color: #222e3c;
+  color: #ecf0f1;
+}
+
+.dark .manage-container {
+  background-color: #222e3c;
+  color: #ecf0f1;
+}
+
+
+.dark .navbar {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.dark .page-title,
+.dark .title,
+.dark h3,
+.dark .section-title {
+  color: #ecf0f1;
+}
+
+.dark .card,
+.dark .form-card {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark input,
+.dark select {
+  background-color: #34495e;
+  color: #ecf0f1;
+  border: 1px solid #4a627a;
+}
+
+.dark button {
+  background-color: #3498db;
   color: white;
+  border: none;
+  border-radius: 10%;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.dark button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark .theme-toggle-button {
+  border-color: #7f8c8d;
+  color: #ecf0f1;
+}
+
+.dark .theme-toggle-button:hover {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.dark .employee-table th, .dark .table th,
+.dark .employee-table td, .dark .table td {
+  border: 1px solid #4a627a;
+}
+
+.dark .employee-table th, .dark .table th {
+  background-color: #3a506b;
+}
+
+/* Base style for ALL table rows in dark mode */
+.dark .employee-table tr,
+.dark .table tr {
+  background-color: #2c3e50; /* A base dark color */
+}
+
+/* Style for the alternating (even) rows */
+.dark .employee-table tr:nth-child(even),
+.dark .table tr:nth-child(even) {
+  background-color: #34495e; /* A slightly different dark color */
+}
+
+.dark .employee-table th {
+  color: white;
 }

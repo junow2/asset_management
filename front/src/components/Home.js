@@ -9,8 +9,6 @@ export default function Home() {
 
   return (
     <>
-    
-      <div className = "header"></div>
 
       <div className = "main-container">
 
@@ -33,7 +31,7 @@ export default function Home() {
 
         {/* 미납 현황 */}
         <section classNmae="card-section">
-          <h2 className="section-title">전체 미납금액 현황</h2>
+          <h2 className="page-title">전체 미납금액 현황</h2>
           <UnpaidStatus />
         </section>
 
