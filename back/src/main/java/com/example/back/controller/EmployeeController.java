@@ -1,5 +1,6 @@
 package com.example.back.controller;
 
+import com.example.back.dto.UnpaidSummaryDTO;
 import com.example.back.entity.Employee;
 import com.example.back.repository.EmployeeRepository;
 import com.example.back.service.EmployeeService;
@@ -31,9 +32,10 @@ public class EmployeeController {
 
     /** ✅ 직원 이름으로 검색 (부분 일치) */
     @GetMapping("/search")
-    public List<Employee> searchEmployeesByName(@RequestParam String name) {
-        // 이름에 name이 포함된 직원 리스트 반환
-        return employeeRepository.findByName(name);
+    public ResponseEntity<List<Employee>> searchEmployees(@RequestParam String name) {
+        List<Employee> employees = employeeService.searchEmployessByName(name);
+        
+        return ResponseEntity.ok(employees);       
     }
 
     /** ✅ 직원 단일 조회 (선택적) */
@@ -66,5 +68,10 @@ public class EmployeeController {
         }
         employeeRepository.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/unpaid-summary")
+    public ResponseEntity<UnpaidSummaryDTO> getUnpaidSummary() {
+        return ResponseEntity.ok(employeeService.getUnpaidSummary());
     }
 }
