@@ -13,6 +13,25 @@
   color: #34495e;
 }
 
+.styled-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column; /* This will now correctly stack the form elements */
+}
+
+.styled-form input,
+.styled-form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
 .form-card {
   max-width: 500px;
   margin: 0 auto;
@@ -20,17 +39,27 @@
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .form-card label {
-  display: block;
+  /* display: block; */
   margin-bottom: 8px;
   font-weight: 600;
 }
 
-.form-card input,
+.form-card input {
+  /* width: 95.5%; */
+  padding: 10px;
+  margin-bottom: 20px;
+  
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
 .form-card select {
-  width: 98%;
+  /* width: 100%; */
   padding: 10px;
   margin-bottom: 20px;
   
@@ -39,7 +68,8 @@
 }
 
 .submit-btn {
-  width: 100%;
+  /* width: 100%; */
+  margin-left: auto;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -48,6 +78,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s ease;
+  
 }
 
 .submit-btn:hover {

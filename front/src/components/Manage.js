@@ -154,7 +154,7 @@ export default function Manage() {
             <div className="page-title">인원관리 페이지</div>
 
             <div className="form-card">
-                <form onSubmit={handleSubmit}>
+                <form className="styled-form" onSubmit={handleSubmit}>
                     <input placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} required />
                     <input type="month" value={joinDate} onChange={(e) => setJoinDate(e.target.value)} required />
                     <select value={position} onChange={(e) => setPosition(e.target.value)} required>

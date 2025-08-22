@@ -3,10 +3,10 @@ import './css/Manage.css'; // Assuming you want to reuse the same styles
 
 // This map translates the English enum name from the backend to Korean for display.
 const positionDisplayMap = {
-    SUSEOK: "수석",
+    SUSEOK:  "수석",
     CHAEKIM: "책임",
     CHAJANG: "차장",
-    SAWON: "사원"
+    SAWON:   "사원"
 };
 
 export default function AddPayment() {
@@ -48,7 +48,7 @@ export default function AddPayment() {
 
             if (response.ok) {
                 alert('납부 내역이 등록되었습니다.');
-                // Clear the form for the next entry
+                
                 setSelectedEmployee('');
                 setPaymentMonth('');
                 setAmount('');

@@ -14,9 +14,9 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
         <Link to="/employee">인원관리</Link>
         <Link to="/add">납부등록</Link>
         <Link to="/payments">납부조회</Link>
-        <button onClick={toggleDarkMode} className="theme-toggle-button">
+        <ch-button onClick={toggleDarkMode} className="theme-toggle-button">
           {isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-        </button>
+        </ch-button>
       </div>
     </nav>
   );

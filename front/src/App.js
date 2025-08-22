@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Manage from './components/Manage';
 import Payments from './components/Payments';
 import Addpayment from './components/Addpayment';
-import ScrollToTop from './components/ScrollToTop'; // 👈 1. Import the component
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className={isDarkMode ? 'dark' : ''}>
       <BrowserRouter>
-        <ScrollToTop /> {/* 👈 2. Add it here */}
+        <ScrollToTop /> 
         <Routes>
           <Route path="/" element={<Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}>
             <Route index element={<Home />} />
